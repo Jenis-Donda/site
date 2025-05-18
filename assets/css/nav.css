@@ -1,0 +1,124 @@
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 1050;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  padding: 0 1rem;
+}
+
+.navbar-brand img {
+  height: 70px;
+  display: block;
+  object-fit: contain;
+  padding: 0px;
+}
+
+.navbar-nav {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 0%;
+}
+
+.navbar-collapse {
+  padding: 0;
+}
+
+.navbar-brand,
+.nav-link {
+  color: #323131 !important;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.navbar-brand:hover,
+.nav-link:hover {
+  color: #0e83f8 !important;
+}
+
+.nav-item {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 0%;
+}
+
+.dropdown-menu {
+  background-color: #ffffff;
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  margin-top: 0.5rem;
+  min-width: 180px;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-item {
+  color: #0c0c0c;
+  padding: 12px 20px;
+  font-weight: 200 !important;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #ffffff;
+  color: #0166ff;
+  text-decoration: none;
+}
+
+.navbar .dropdown-toggle::after {
+  margin-left: 8px;
+  border-top: 5px solid #323131;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  transition: transform 0.3s ease;
+}
+
+.navbar .dropdown-toggle:hover::after,
+.navbar .dropdown-toggle:focus::after {
+  border-top-color: #323131;
+}
+
+.nav-item.dropdown:hover > .dropdown-menu,
+.nav-item.dropdown.show > .dropdown-menu {
+  display: block !important;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.nav-item.dropdown:hover > .dropdown-toggle::after,
+.nav-item.dropdown.show > .dropdown-toggle::after {
+  transform: rotate(-180deg);
+}
+
+@media (max-width: 768px) {
+  .nav-item {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: relative;
+    width: 100%;
+    top: auto;
+    left: auto;
+  }
+
+  .nav-item.dropdown .dropdown-menu {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .nav-item.dropdown.show .dropdown-menu {
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+  }
+}
