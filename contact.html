@@ -186,6 +186,45 @@
       </div>
     </nav>
 
+    <script>
+      const dropdown = document.getElementById("productsDropdown");
+      let timeout;
+
+      dropdown.addEventListener("mouseenter", () => {
+        clearTimeout(timeout);
+        dropdown.classList.add("show");
+        dropdown
+          .querySelector("a.dropdown-toggle")
+          .setAttribute("aria-expanded", "true");
+      });
+
+      dropdown.addEventListener("mouseleave", () => {
+        timeout = setTimeout(() => {
+          dropdown.classList.remove("show");
+          dropdown
+            .querySelector("a.dropdown-toggle")
+            .setAttribute("aria-expanded", "false");
+        }, 500);
+      });
+
+      dropdown.querySelector(".dropdown-menu").addEventListener("mouseenter", () => {
+        clearTimeout(timeout);
+        dropdown.classList.add("show");
+        dropdown
+          .querySelector("a.dropdown-toggle")
+          .setAttribute("aria-expanded", "true");
+      });
+
+      dropdown.querySelector(".dropdown-menu").addEventListener("mouseleave", () => {
+        timeout = setTimeout(() => {
+          dropdown.classList.remove("show");
+          dropdown
+            .querySelector("a.dropdown-toggle")
+            .setAttribute("aria-expanded", "false");
+        }, 500);
+      });
+    </script>
+
     <h1 class="contact-title">Contact Us</h1>
     <div class="contact-container">
       <div class="contact-card">
