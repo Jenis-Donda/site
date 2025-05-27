@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How We Started</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="assets/css/nav.css" rel="stylesheet" />
+  <link href="assets/css/footer.css" rel="stylesheet" />
+  <style>
+    body {
+      color: #f1f1f1;
+      font-family: 'Segoe UI', sans-serif;
+      margin-top: 50px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+
+    .divider {
+      border-top: 2px solid #ccc;
+      width: 100%;
+      margin: 0.5rem 0 2rem;
+    }
+
+    .how-we-started {
+      padding: 60px 15px;
+      background-color: #2d2d2d;
+      margin-top: 20%;
+    }
+
+    .factory-image {
+      width: 70%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+      margin-left: 20%;
+    }
+
+    /* ---- Vision & Mission Section ---- */
+    .vision-mission-section {
+      background-color: #fff;
+      padding: 60px 20px;
+      color: #333;
+    }
+
+    .cards-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .card {
+      background-color: #fff;
+      width: 500px;
+      max-width: 100%;
+      padding: 40px 30px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card img {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+
+    .card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .milestones-section {
+      background-color: #2d2d2d;
+      color: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .milestones-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .milestones-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .milestone-card {
+      background-color: #2d2d2d;
+      padding: 30px 20px;
+      width: 250px;
+      max-width: 90%;
+      box-shadow: 0 4px 8px rgba(19, 19, 19, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .milestone-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .milestone-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .milestone-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #f1f1f1;
+    }
+
+    .milestone-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+    
+
+    .banner {
+      background-color: #000000;
+      color: white;
+      display: flex;
+      align-items: center;
+
+      justify-content: space-between;
+      padding: 40px 10%;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .banner-text {
+      font-weight: 700;
+      font-size: 1.8rem;
+      max-width: 600px;
+    }
+
+    .btn-connect {
+      background-color: #606873;
+      border: none;
+      color: white;
+      padding: 14px 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .btn-connect:hover {
+      background-color: #4a535a;
+    }
+
+    @media (max-width: 768px) {
+      .milestones-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .milestone-card {
+        width: 90%;
+      }
+
+      .section-title{
+        font-size: 1.5rem;
+        margin-top: 4%;
+      }
+    }
+
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 30px 20px;
+      }
+
+      .card img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .card h3 {
+        font-size: 1.4rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cards-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/logo.png" alt="Steel Manufacturer Logo" />
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown" id="productsDropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+            Products
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="extrusions.html">Extrusions</a></li>
+            <li><a class="dropdown-item" href="powder-coating.html">Powder Coating</a></li>
+            <li><a class="dropdown-item" href="color-anodizing.html">Color Anodizing</a></li>
+            <li><a class="dropdown-item" href="wood-finished.html">Wood Finished</a></li>
+            <li><a class="dropdown-item" href="fabricated-products.html">Fabricated Products</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+    <script>
+      const dropdown = document.getElementById("productsDropdown");
+      let timeout;
+
+      dropdown.addEventListener("mouseenter", () => {
+        clearTimeout(timeout);
+        dropdown.classList.add("show");
+        dropdown
+          .querySelector("a.dropdown-toggle")
+          .setAttribute("aria-expanded", "true");
+      });
+
+      dropdown.addEventListener("mouseleave", () => {
+        timeout = setTimeout(() => {
+          dropdown.classList.remove("show");
+          dropdown
+            .querySelector("a.dropdown-toggle")
+            .setAttribute("aria-expanded", "false");
+        }, 500);
+      });
+
+      dropdown.querySelector(".dropdown-menu").addEventListener("mouseenter", () => {
+        clearTimeout(timeout);
+        dropdown.classList.add("show");
+        dropdown
+          .querySelector("a.dropdown-toggle")
+          .setAttribute("aria-expanded", "true");
+      });
+
+      dropdown.querySelector(".dropdown-menu").addEventListener("mouseleave", () => {
+        timeout = setTimeout(() => {
+          dropdown.classList.remove("show");
+          dropdown
+            .querySelector("a.dropdown-toggle")
+            .setAttribute("aria-expanded", "false");
+        }, 500);
+      });
+    </script>
+
+  <!-- How We Started Section -->
+  <div class="container-fluid how-we-started">
+    <div class="row align-items-center">
+      <div class="col-lg-6 mb-2 mb-lg-0">
+        <img src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg" alt="Factory Building"
+          class="factory-image">
+      </div>
+      <div class="col-lg-6">
+        <h2 class="section-title">HOW WE STARTED</h2>
+        <div class="divider"></div>
+        <p>We are one of the leading foundry specializing in the production of high-quality Aluminium Extrusion parts.
+          Established in 2019 by Mr. Avnish Gajera, ANB Metal Cast Ltd. has quickly become a trusted name in the
+          industry.</p>
+        <p>As an ISO 9001:2015 and ISO 14001 certified company, we are committed to delivering products and services of
+          exceptional quality that meet the highest industry standards. Our state-of-the-art facilities enable us to
+          deliver precision, reliability, and affordability, while meeting the tightest deadlines.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vision & Mission Section -->
+  <section class="vision-mission-section">
+    <div class="cards-container">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077063.png" alt="Vision Icon">
+        <h3>Our Vision</h3>
+        <p>
+          To be a reputable organization that delivers customized solutions and service quality excellence for aluminum
+          extrusion products.
+        </p>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Mission Icon">
+        <h3>Our Mission</h3>
+        <p>
+          To develop and manufacture high quality Aluminum Extrusion products that meet or exceed customer expectations
+          for performance, durability, and reliability.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="milestones-section">
+    <h2 class="milestones-title">OUR MILESTONES</h2>
+    <div class="milestones-container">
+      <!-- Milestone 2019 -->
+      <div class="milestone-card">
+        <div class="milestone-icon"><i class="fa-solid fa-industry"></i></div>
+        <h3>2019</h3>
+        <p>Started with Pressure Die Cast Machines with small setup</p>
+      </div>
+
+      <!-- Milestone 2020 -->
+      <div class="milestone-card">
+        <div class="milestone-icon"><i class="fa-solid fa-arrow-up"></i></div>
+        <h3>2020</h3>
+        <p>Purchased Aluminum Extrusion Press of 1400 Tons & 650 Tons Capacity.</p>
+      </div>
+
+      <!-- Milestone 2021 -->
+      <div class="milestone-card">
+        <div class="milestone-icon"><i class="fa-solid fa-shapes"></i></div>
+        <h3>2021</h3>
+        <p>Started In-house Die Development Department</p>
+      </div>
+
+      <!-- Milestone 2023 -->
+      <div class="milestone-card">
+        <div class="milestone-icon"><i class="fa-solid fa-chart-simple"></i></div>
+        <h3>2023</h3>
+        <p>Planning for expansion of unit with 3200 Ton Press</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="banner">
+    <div class="banner-text">
+      Are you Looking for a Reliable Partner for Aluminium Extrusion Needs?
+    </div>
+    <button class="btn-connect">
+      <i class="fa-solid fa-phone"></i> LET'S CONNECT
+    </button>
+  </section>
+
+  <footer class="footer">
+        <div class="container">
+          <div class="footer-section logo-section">
+            <img src="assets/images/logo.png" alt="Company Logo" class="footer-logo" />
+            <p class="footer-description">Your trusted partner for innovative solutions.</p>
+          </div>
+
+          <div class="footer-section links-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section contact-section">
+            <h3>Contact Us</h3>
+            <p class="contact-link"><i class="fa-solid fa-phone"></i>+91 12345 12345</p>
+            <p class="contact-link"><i class="fa-solid fa-envelope"></i>info@company.com</p>
+            <p class="address"><i class="fa-solid fa-location-dot"></i>1234 Innovation Drive<br />
+              City, State, 12345
+            </p>
+
+            <!-- Social Icons exactly below address -->
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook" class="social-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" aria-label="Twitter" class="social-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" aria-label="LinkedIn" class="social-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="#" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+              </a>
+            </div>
+          </div>
+      </footer>
+
+      <div class="footer-bottom">
+        <p>© <span id="currentYear"></span> Company Name. All rights reserved.</p>
+      </div>
+
+      <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+      </script>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
