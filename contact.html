@@ -140,8 +140,9 @@
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg">
-    <a class="navbar-brand" href="#">
+   <nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand me-2" href="#">
       <img src="assets/images/logo.png" alt="Steel Manufacturer Logo" />
     </a>
 
@@ -149,8 +150,9 @@
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-      <ul class="navbar-nav">
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-0">
         <li class="nav-item">
           <a class="nav-link" href="index.html">Home</a>
         </li>
@@ -174,46 +176,47 @@
         </li>
       </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-    <script>
-      const dropdown = document.getElementById("productsDropdown");
-      let timeout;
+  <script>
+    const dropdown = document.getElementById("productsDropdown");
+    let timeout;
 
-      dropdown.addEventListener("mouseenter", () => {
-        clearTimeout(timeout);
-        dropdown.classList.add("show");
+    dropdown.addEventListener("mouseenter", () => {
+      clearTimeout(timeout);
+      dropdown.classList.add("show");
+      dropdown
+        .querySelector("a.dropdown-toggle")
+        .setAttribute("aria-expanded", "true");
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      timeout = setTimeout(() => {
+        dropdown.classList.remove("show");
         dropdown
           .querySelector("a.dropdown-toggle")
-          .setAttribute("aria-expanded", "true");
-      });
+          .setAttribute("aria-expanded", "false");
+      }, 500);
+    });
 
-      dropdown.addEventListener("mouseleave", () => {
-        timeout = setTimeout(() => {
-          dropdown.classList.remove("show");
-          dropdown
-            .querySelector("a.dropdown-toggle")
-            .setAttribute("aria-expanded", "false");
-        }, 500);
-      });
+    dropdown.querySelector(".dropdown-menu").addEventListener("mouseenter", () => {
+      clearTimeout(timeout);
+      dropdown.classList.add("show");
+      dropdown
+        .querySelector("a.dropdown-toggle")
+        .setAttribute("aria-expanded", "true");
+    });
 
-      dropdown.querySelector(".dropdown-menu").addEventListener("mouseenter", () => {
-        clearTimeout(timeout);
-        dropdown.classList.add("show");
+    dropdown.querySelector(".dropdown-menu").addEventListener("mouseleave", () => {
+      timeout = setTimeout(() => {
+        dropdown.classList.remove("show");
         dropdown
           .querySelector("a.dropdown-toggle")
-          .setAttribute("aria-expanded", "true");
-      });
-
-      dropdown.querySelector(".dropdown-menu").addEventListener("mouseleave", () => {
-        timeout = setTimeout(() => {
-          dropdown.classList.remove("show");
-          dropdown
-            .querySelector("a.dropdown-toggle")
-            .setAttribute("aria-expanded", "false");
-        }, 500);
-      });
-    </script>
+          .setAttribute("aria-expanded", "false");
+      }, 500);
+    });
+  </script>
 
     <h1 class="contact-title">Contact Us</h1>
     <div class="contact-container">
@@ -256,8 +259,8 @@
           <div class="footer-section links-section">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
               <li><a href="#">Services</a></li>
               <li><a href="#">Projects</a></li>
               <li><a href="#">Contact</a></li>
@@ -298,5 +301,6 @@
         document.getElementById('currentYear').textContent = new Date().getFullYear();
       </script>    
       
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

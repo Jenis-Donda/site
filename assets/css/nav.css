@@ -5,7 +5,11 @@ nav.navbar {
   background-color: #ffffff;
   z-index: 1050;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  padding: 0 1rem;
+  padding: 0 3rem;
+}
+
+.navbar-brand {
+  margin-right: 10px; /* Adjust this value as needed */
 }
 
 .navbar-brand img {
@@ -122,3 +126,4 @@ nav.navbar {
     visibility: visible;
   }
 }
+
