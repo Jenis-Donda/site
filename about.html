@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How We Started</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -135,7 +135,7 @@
       font-size: 0.95rem;
       line-height: 1.5;
     }
-    
+
 
     .banner {
       background-color: #000000;
@@ -185,7 +185,7 @@
         width: 90%;
       }
 
-      .section-title{
+      .section-title {
         font-size: 1.5rem;
         margin-top: 4%;
       }
@@ -193,9 +193,10 @@
 
 
     @media (max-width: 768px) {
-      body{
+      body {
         margin: 0%;
       }
+
       .card {
         padding: 30px 20px;
       }
@@ -220,7 +221,6 @@
         align-items: center;
       }
     }
-
   </style>
 </head>
 
@@ -263,64 +263,64 @@
   </nav>
 
 
-    <script>
-      const dropdown = document.getElementById("productsDropdown");
-      let timeout;
+  <script>
+    const dropdown = document.getElementById("productsDropdown");
+    let timeout;
 
-      dropdown.addEventListener("mouseenter", () => {
-        clearTimeout(timeout);
-        dropdown.classList.add("show");
+    dropdown.addEventListener("mouseenter", () => {
+      clearTimeout(timeout);
+      dropdown.classList.add("show");
+      dropdown
+        .querySelector("a.dropdown-toggle")
+        .setAttribute("aria-expanded", "true");
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      timeout = setTimeout(() => {
+        dropdown.classList.remove("show");
         dropdown
           .querySelector("a.dropdown-toggle")
-          .setAttribute("aria-expanded", "true");
-      });
+          .setAttribute("aria-expanded", "false");
+      }, 500);
+    });
 
-      dropdown.addEventListener("mouseleave", () => {
-        timeout = setTimeout(() => {
-          dropdown.classList.remove("show");
-          dropdown
-            .querySelector("a.dropdown-toggle")
-            .setAttribute("aria-expanded", "false");
-        }, 500);
-      });
+    dropdown.querySelector(".dropdown-menu").addEventListener("mouseenter", () => {
+      clearTimeout(timeout);
+      dropdown.classList.add("show");
+      dropdown
+        .querySelector("a.dropdown-toggle")
+        .setAttribute("aria-expanded", "true");
+    });
 
-      dropdown.querySelector(".dropdown-menu").addEventListener("mouseenter", () => {
-        clearTimeout(timeout);
-        dropdown.classList.add("show");
+    dropdown.querySelector(".dropdown-menu").addEventListener("mouseleave", () => {
+      timeout = setTimeout(() => {
+        dropdown.classList.remove("show");
         dropdown
           .querySelector("a.dropdown-toggle")
-          .setAttribute("aria-expanded", "true");
-      });
-
-      dropdown.querySelector(".dropdown-menu").addEventListener("mouseleave", () => {
-        timeout = setTimeout(() => {
-          dropdown.classList.remove("show");
-          dropdown
-            .querySelector("a.dropdown-toggle")
-            .setAttribute("aria-expanded", "false");
-        }, 500);
-      });
-    </script>
+          .setAttribute("aria-expanded", "false");
+      }, 500);
+    });
+  </script>
 
   <!-- How We Started Section -->
   <div class="container-fluid how-we-started">
-  <div class="row align-items-center">
-    <div class="col-12 col-md-6 mb-2 mb-lg-0 d-flex justify-content-center">
-      <img src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg" alt="Factory Building"
-        class="factory-image img-fluid mx-auto d-block">
-    </div>
-    <div class="col-12 col-md-6">
-      <h2 class="section-title">HOW WE STARTED</h2>
-      <div class="divider"></div>
-      <p>We are one of the leading foundry specializing in the production of high-quality Aluminium Extrusion parts.
-        Established in 2019 by Mr. Avnish Gajera, ANB Metal Cast Ltd. has quickly become a trusted name in the
-        industry.</p>
-      <p>As an ISO 9001:2015 and ISO 14001 certified company, we are committed to delivering products and services of
-        exceptional quality that meet the highest industry standards. Our state-of-the-art facilities enable us to
-        deliver precision, reliability, and affordability, while meeting the tightest deadlines.</p>
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 mb-2 mb-lg-0 d-flex justify-content-center">
+        <img src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg" alt="Factory Building"
+          class="factory-image img-fluid mx-auto d-block">
+      </div>
+      <div class="col-12 col-md-6">
+        <h2 class="section-title">HOW WE STARTED</h2>
+        <div class="divider"></div>
+        <p>We are one of the leading foundry specializing in the production of high-quality Aluminium Extrusion parts.
+          Established in 2019 by Mr. Avnish Gajera, ANB Metal Cast Ltd. has quickly become a trusted name in the
+          industry.</p>
+        <p>As an ISO 9001:2015 and ISO 14001 certified company, we are committed to delivering products and services of
+          exceptional quality that meet the highest industry standards. Our state-of-the-art facilities enable us to
+          deliver precision, reliability, and affordability, while meeting the tightest deadlines.</p>
+      </div>
     </div>
   </div>
-</div>
 
   <!-- Vision & Mission Section -->
   <section class="vision-mission-section">
@@ -355,58 +355,57 @@
   </section>
 
   <footer class="footer">
-        <div class="container">
-          <div class="footer-section logo-section">
-            <img src="assets/images/logo.png" alt="Company Logo" class="footer-logo" />
-            <p class="footer-description">Your trusted partner for innovative solutions.</p>
-          </div>
-
-          <div class="footer-section links-section">
-            <h3>Quick Links</h3>
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-section contact-section">
-            <h3>Contact Us</h3>
-            <p class="contact-link"><i class="fa-solid fa-phone"></i>+91 12345 12345</p>
-            <p class="contact-link"><i class="fa-solid fa-envelope"></i>info@company.com</p>
-            <p class="address"><i class="fa-solid fa-location-dot"></i>1234 Innovation Drive<br />
-              City, State, 12345
-            </p>
-
-            <!-- Social Icons exactly below address -->
-            <div class="social-icons">
-              <a href="#" aria-label="Facebook" class="social-icon" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" aria-label="Twitter" class="social-icon" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" aria-label="LinkedIn" class="social-icon" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-              <a href="#" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
-      </footer>
-
-      <div class="footer-bottom">
-        <p>© <span id="currentYear"></span> Company Name. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-section logo-section">
+        <img src="assets/images/logo.png" alt="Company Logo" class="footer-logo" />
+        <p class="footer-description">Your trusted partner for innovative solutions.</p>
       </div>
 
-      <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-      </script>
+      <div class="footer-section links-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="#">Contact us</a></li>
+        </ul>
+      </div>
 
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <div class="footer-section contact-section">
+        <h3>Contact Us</h3>
+        <p class="contact-link"><i class="fa-solid fa-phone"></i>+91 12345 12345</p>
+        <p class="contact-link"><i class="fa-solid fa-envelope"></i>info@company.com</p>
+        <p class="address"><i class="fa-solid fa-location-dot"></i>1234 Innovation Drive<br />
+          City, State, 12345
+        </p>
+
+        <!-- Social Icons exactly below address -->
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" aria-label="Twitter" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-icon" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+  </footer>
+
+  <div class="footer-bottom">
+    <p>© <span id="currentYear"></span> Company Name. All rights reserved.</p>
+  </div>
+
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
