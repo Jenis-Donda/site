@@ -9,11 +9,12 @@ nav.navbar {
 }
 
 .navbar-brand {
-  margin-right: 10px; /* Adjust this value as needed */
+  margin-right: 10px;
+  margin-left: 15%; /* Adjust this value as needed */
 }
 
 .navbar-brand img {
-  height: 70px;
+  height: 90px;
   display: block;
   object-fit: contain;
   padding: 0px;
@@ -124,6 +125,10 @@ nav.navbar {
     display: block !important;
     opacity: 1;
     visibility: visible;
+  }
+
+  .navbar-brand{
+    margin-left: 0%;
   }
 }
 
