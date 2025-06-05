@@ -113,5 +113,9 @@
     .service-image {
       height: 250px;
     }
+
+    .section-heading .title {
+      font-size: 2.3rem;
+    }
   }
   

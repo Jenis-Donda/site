@@ -98,4 +98,9 @@
     .anb-card-grid {
       grid-template-columns: 1fr;
     }
+
+    .anb-section-title {
+      font-size: 30px;
+      margin-bottom: 5%;
+    }
   }

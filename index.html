@@ -29,11 +29,11 @@
     }
 
     .video-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
 
 
     .video-container video {
@@ -171,45 +171,11 @@
       }
     }
 
-    @media (max-width: 768px) {
-      .content-overlay {
-        padding-left: 5%;
-        text-align: center;
-        align-items: center;
-      }
-
-      .content-overlay .btn {
-        width: auto;
-        align-self: center;
-      }
-
-      .content-overlay h1 {
-        line-height: 1.2;
-      }
-
-      .right-text {
-        top: 5%;
-        right: 5%;
-        font-size: 1rem;
-        padding-left: 15px;
-        border-left-width: 2px;
-        border-left-style: solid;
-        border-left-color: #ffffff;
-      }
-
-      .content-overlay p::before {
-        left: -30px;
-        height: 200px;
-        top: -10px;
-      }
-    }
-
     .banner {
       background-color: #000000;
       color: white;
       display: flex;
       align-items: center;
-
       justify-content: space-between;
       padding: 40px 10%;
       flex-wrap: wrap;
@@ -242,13 +208,58 @@
       background-color: #4a535a;
     }
 
-    
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
+
+    .background-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .content-overlay {
+        padding-left: 5%;
+        text-align: center;
+        align-items: center;
+      }
+
+      .about-heading {
+        font-size: 30px;
+      }
+
+      .content-overlay .btn {
+        width: auto;
+        align-self: center;
+      }
+
+      .content-overlay h1 {
+        line-height: 1.2;
+      }
+
+      .right-text {
+        top: 5%;
+        right: 5%;
+        font-size: 1rem;
+        padding-left: 15px;
+        border-left-width: 2px;
+        border-left-style: solid;
+        border-left-color: #ffffff;
+      }
+
+      .content-overlay p::before {
+        left: -30px;
+        height: 200px;
+        top: -10px;
+      }
+
+      .banner-text {
+        font-size: 1.5rem;
+      }
+
+      body {
+        padding-top: 80px;
+      }
+    }
   </style>
 </head>
 
@@ -328,17 +339,18 @@
     });
   </script>
 
-<div class="video-container">
-  <img src="https://images.pexels.com/photos/1171480/pexels-photo-1171480.jpeg" alt="Aluminium Extrusions Banner" class="background-image" />
-  
-  <div class="content-overlay">
-    <p>MANUFACTURER OF HIGH VALUE</p>
-    <h1><span>ALUMINIUM</span><span>EXTRUSIONS</span></h1>
-    <a href="#" class="btn">KNOW MORE</a>
+  <div class="video-container">
+    <img src="https://images.pexels.com/photos/1171480/pexels-photo-1171480.jpeg" alt="Aluminium Extrusions Banner"
+      class="background-image" />
+
+    <div class="content-overlay">
+      <p>MANUFACTURER OF HIGH VALUE</p>
+      <h1><span>ALUMINIUM</span><span>EXTRUSIONS</span></h1>
+      <a href="#" class="btn">KNOW MORE</a>
+    </div>
+
+    <div class="right-text">Helping you to create a sustainable planet.</div>
   </div>
-  
-  <div class="right-text">Helping you to create a sustainable planet.</div>
-</div>
 
 
 
@@ -347,7 +359,7 @@
     <div class="row align-items-center">
       <div class="col-md-6 about-section">
         <h4>ABOUT US</h4>
-        <h1 class="about-heading">QUALITY THAT'S<br>BUILT TO LAST</h1>
+        <p class="about-heading">QUALITY THAT'S<br>BUILT TO LAST</p>
         <p class="about-text">
           Welcome to ANB Metal Cast Ltd., a leading manufacturer of high quality aluminium extrusions.
           We specialize in delivering customized solutions that meet the unique needs of our customers across a wide
@@ -393,7 +405,7 @@
             <div class="col-lg-6">
               <div class="section-heading">
                 <h3 class="subtitle">WHAT WE OFFER</h3>
-                <h2 class="title">OUR SERVICES</h2>
+                <p class="title">OUR SERVICES</p>
               </div>
             </div>
             <div class="col-lg-6">
@@ -451,74 +463,80 @@
         </div>
       </section>
 
-      
-<!-- Swiper Carousel Section -->
-<section class="py-5">
-  <div class="container-fluid" style="padding-left: 12%; padding-right: 12%;">
-    <div class="section-heading mb-4">
-      <h6 class="subheading">INDUSTRIES WE SERVE</h6>
-      <h2 class="main-heading">OUR MARKET SEGMENTS</h2>
-  </div>
-    <div class="swiper mySwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <img src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg" class="img-fluid" alt="Image 1" />
-          <p>Architecture</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg" class="img-fluid" alt="Image 2" />
-          <p>Solar</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://images.pexels.com/photos/2781814/pexels-photo-2781814.jpeg" class="img-fluid" alt="Image 3" />
-          <p>Mechanical</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://images.pexels.com/photos/236089/pexels-photo-236089.jpeg" class="img-fluid" alt="Image 4" />
-          <p>Electrical</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://images.pexels.com/photos/1648419/pexels-photo-1648419.jpeg" class="img-fluid" alt="Image 5" />
-          <p>Automotive</p>
-        </div>
-        <div class="swiper-slide">
-          <img src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg" class="img-fluid" alt="Image 5" />
-          <p>Manufacturing</p>
-        </div>
-        <!-- Add more slides as needed -->
-      </div>
 
-      <!-- Optional navigation buttons -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </div>
-</section>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script>
-  const swiper = new Swiper('.mySwiper', {
-    loop: true,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    breakpoints: {
-      1200: {
-        slidesPerView: 4,
-      },
-      992: {
-        slidesPerView: 3,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      0: {
-        slidesPerView: 1,
-      }
-    }
-  });
-</script>
+      <!-- Swiper Carousel Section -->
+      <section class="py-5">
+        <div class="container-fluid" style="padding-left: 12%; padding-right: 12%;">
+          <div class="section-heading mb-4">
+            <h6 class="subheading">INDUSTRIES WE SERVE</h6>
+            <h2 class="main-heading">OUR MARKET SEGMENTS</h2>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg" class="img-fluid"
+                  alt="Image 1" />
+                <p>Architecture</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg" class="img-fluid"
+                  alt="Image 2" />
+                <p>Solar</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.pexels.com/photos/2781814/pexels-photo-2781814.jpeg" class="img-fluid"
+                  alt="Image 3" />
+                <p>Mechanical</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.pexels.com/photos/236089/pexels-photo-236089.jpeg" class="img-fluid"
+                  alt="Image 4" />
+                <p>Electrical</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.pexels.com/photos/1648419/pexels-photo-1648419.jpeg" class="img-fluid"
+                  alt="Image 5" />
+                <p>Automotive</p>
+              </div>
+              <div class="swiper-slide">
+                <img src="https://images.pexels.com/photos/2760243/pexels-photo-2760243.jpeg" class="img-fluid"
+                  alt="Image 5" />
+                <p>Manufacturing</p>
+              </div>
+              <!-- Add more slides as needed -->
+            </div>
+
+            <!-- Optional navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>
+        const swiper = new Swiper('.mySwiper', {
+          loop: true,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          breakpoints: {
+            1200: {
+              slidesPerView: 4,
+            },
+            992: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            0: {
+              slidesPerView: 1,
+            }
+          }
+        });
+      </script>
 
 
       <div class="anb-wrapper">
@@ -574,7 +592,7 @@
         </div>
         <button class="btn-connect" onclick="window.location.href='contact.html'">
           <i class="fa-solid fa-phone"></i> LET'S CONNECT
-        </button>        
+        </button>
       </section>
 
       <footer class="footer">
